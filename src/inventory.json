@@ -1,0 +1,19 @@
+[
+  {
+    "ingredientId": 1,
+    "Item": "Potato",
+    "Units": 100
+  },
+
+  {
+    "ingredientId": 2,
+    "Item": "Pizza Base",
+    "Units": 100
+  },
+
+  {
+    "ingredientId": 3,
+    "Item": "Chicken",
+    "Units": 100
+  }
+]
