@@ -1,20 +1,20 @@
 import React, { useContext } from "react";
 import { Context } from "../../Context";
-import data from "../../data";
+import menu from "../../menu";
 
 export default function Total() {
   const [items] = useContext(Context);
 
-  const totalPrice = Object.keys(items).reduce((acc, curr) => {
+  const totalprice = Object.keys(items).reduce((acc, curr) => {
     const [group, item] = curr.split("-");
-    const amount = items[curr] * data[group][item].price;
+    const amount = items[curr] * menu[group][item].price;
     return acc + amount;
   }, 0);
 
   return (
     <div className="total">
       <span className="total-title">Total:</span>
-      <span className="total-price">Rs. {totalPrice}</span>
+      <span className="total-price">Rs. {totalprice}</span>
     </div>
   );
 }

@@ -3,10 +3,84 @@ import { Button } from "./Button";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import AdminLogin from "../components/pages/AdminLogin";
+import Menu2 from "./pages/Menu2";
+
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
+  const isUser = localStorage.getItem("isUser");
+  const isAdmin = localStorage.getItem("isAdmin");
+  
+  if (isUser==="true" && isAdmin==="true")
+{
+  localStorage.removeItem("isUser");
+  window.location.reload();
+  
+}
+  const Click=()=>{
+    
+    if( isUser==="true")
+    {
+    localStorage.removeItem("isUser");
+    window.location.reload();
+    
+  }
+    else if (isAdmin==="true")
+    {
+      localStorage.removeItem("isAdmin");
+      window.location.reload();
+    }
+  }
 
+  const user = [
+    {
+      name: "Home",
+      redirectTo: "/"
+    },
+
+    {
+      name: "Menu",
+      redirectTo: "/Menu2"
+    },
+    {
+      name: "Orders",
+      redirectTo: "/"
+    }
+  ];
+
+  const admin = [
+    {
+      name: "Home",
+      redirectTo: "/"
+    },
+    {
+      name: "Orders",
+      redirectTo: "/orders"
+    },
+    {
+      name: "Menu",
+      redirectTo: "/Menu"
+    },
+    {
+      name: "Inventory",
+      redirectTo: "/Inventory"
+    },
+    {
+      name: "Recipe",
+      redirectTo: "/newRecipe"
+    }
+  ];
+
+  const noone = [
+    {
+      name: "Home",
+      redirectTo: "/"
+    },
+    {
+      name: "Signup",
+      redirectTo: "/SignUp"
+    }
+  ];
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
@@ -37,7 +111,46 @@ function Navbar() {
           </div>
 
           <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
+            {isUser &&
+              user.map((item) => (
+                <li className="nav-item">
+                  <Link
+                    to={item.redirectTo}
+                    className="nav-links"
+                    onClick={closeMobileMenu}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+
+            {isAdmin &&
+              admin.map((item) => (
+                <li className="nav-item">
+                  <Link
+                    to={item.redirectTo}
+                    className="nav-links"
+                    onClick={closeMobileMenu}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            {isUser === false &&
+              isAdmin === false &&
+              noone.map((item) => (
+                <li className="nav-item">
+                  <Link
+                    to={item.redirectTo}
+                    className="nav-links"
+                    onClick={closeMobileMenu}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+
+            {/* <li className="nav-item">
               <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                 Home
               </Link>
@@ -54,8 +167,17 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/Inventory" className="nav-links" onClick={closeMobileMenu}>
+              <Link
+                to="/TableData"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
                 Inventory
+              </Link>
+            </li>
+            <li>
+              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                Recipe
               </Link>
             </li>
             <li>
@@ -66,20 +188,52 @@ function Navbar() {
               >
                 Sign Up
               </Link>
+            </li> */}
+            <li className="nav-item">
+              {/* {button && ( */}
+              <Button
+                className="nav-links"
+                onClick={closeMobileMenu}
+                component={Link}
+                to="/Login"
+              >
+                User
+              </Button>
+              {/* )} */}
             </li>
-            
+            <li className="nav-item">
+              {/* {button && ( */}
+              {/* <Button
+                className="nav-links"
+                onClick={closeMobileMenu}
+                component={Link}
+                to="/AdminLogin"
+              >
+                Admin
+              </Button> */}
+              <a href="/AdminLogin">
+                <button className="btn btn--primary btn--medium">Admin</button>
+              </a>
+              {/* )} */}
+            </li>
+           
+
+            <a href="/">
+                <button className="btn btn--primary btn--medium" onClick={Click} >Logout</button>
+              </a>
           </ul>
-          {button && (
+          {/* {button && (
             <Button component={Link} to="/Login">
               User
             </Button>
-          )}
+          )} */}
 
-          {button && (
+          {/* {button && (
             <Button component={Link} to="/AdminLogin">
               Admin
             </Button>
-          )}
+          )} */}
+
         </div>
       </nav>
     </>

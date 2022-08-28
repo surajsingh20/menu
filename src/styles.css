@@ -39,6 +39,7 @@ body {
   background-color: black;
   margin-bottom: 30px;
   border-color: none;
+  margin-top: 8%;
 }
 .Add a {
   width: 100%;
@@ -188,6 +189,6 @@ input[type="text1"] {
   margin: 0;
 }
 
-.total-price {
+.total-Cost {
   font-size: 1.5rem;
 }

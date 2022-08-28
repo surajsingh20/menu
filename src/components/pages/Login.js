@@ -13,10 +13,6 @@ function Login() {
     {
       username: "suraj",
       password: "5911"
-    },
-    {
-      username: "yash",
-      password: "2233"
     }
   ];
 
@@ -41,6 +37,11 @@ function Login() {
         setErrorMessages({ name: "pass", message: errors.pass });
       } else {
         setIsSubmitted(true);
+        // match condition
+        localStorage.setItem("isUser", true);
+        // localStorage.setItem("isAdmin", false);
+
+        window.location.href = window.location.origin + "/";
       }
     } else {
       // Username not found
@@ -69,11 +70,11 @@ function Login() {
           {renderErrorMessage("pass")}
         </div>
 
-        <div className="input-container">
+        {/* <div className="input-container">
           <span>
             New User ?<Link to="/SignUp"> Register </Link>
           </span>
-        </div>
+        </div> */}
         <div className="button-container">
           <input type="submit" />
         </div>

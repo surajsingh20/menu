@@ -5,18 +5,15 @@ import Mains from "./Mains";
 import Total from "./Total";
 import Footer from "../../components/Footer";
 import "../../styles.css";
-
 import { mains } from "../../menu";
-
 import { Button } from "../../components/Button";
 import { Link } from "react-router-dom";
 import AddMenu from "./AddMenu";
 // import {mains} from "../../menu.json";
-export default function Menu({ dishId, name, type }) {
+
+export default function Menu2({ dishId, name, type }) {
   const [price, setPrice] = useState("");
   return (
-    
-    <>
     <div>
       <Provider>
         <div className="menu">
@@ -37,15 +34,13 @@ export default function Menu({ dishId, name, type }) {
         {""} {price}{" "}
       </p>
 
-      <button className="Add">
+      {/* <button className="Add">
         {" "}
         <a href="/AddMenu"> ADD ITEM </a>
-      </button>
+      </button> */}
 
-      
+      <Footer />
     </div>
-    <Footer />
-    </>
   );
 }
 // //   constructor() {

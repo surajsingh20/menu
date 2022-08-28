@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import "../../tabledata.css";
-function TableData() {
+import "./tabledata.css";
+
+function Inventory() {
   const [data, getData] = useState([]);
   const URL = "https://jsonplaceholder.typicode.com/posts";
 
@@ -20,7 +21,7 @@ function TableData() {
 
   return (
     <>
-      <h1>Inventory</h1>
+      <h1>How to display JSON data to table in React JS</h1>
       <tbody>
         <tr>
           <th>User Id</th>
@@ -41,4 +42,46 @@ function TableData() {
   );
 }
 
-export default TableData;
+ export default Inventory;
+
+// import React from 'react'
+// import InventoryData from "../../InventoryData.json" 
+// function Inventory(){
+// 	const Display= InventoryData.map(
+// 		(key)=>{
+// 			return(
+// 				<tr>
+// 					<td>{key.ingredients}</td>
+ 				
+//  					<td>{key.Itemss}</td>
+//                   <td>{key.Units}</td>
+// 				</tr>
+// 			)
+// 		}
+// 	)
+
+// 	return(
+// 		<div>
+// 			<table >
+// 				<thead>
+// 					<tr>
+// 					<th>Ingredient</th>
+// 				<th>Itemss</th>
+ 				
+//                      <th>Unit</th>
+// 					</tr>
+// 				</thead>
+// 				<tbody>
+				
+					
+// 					{Display}
+					
+// 				</tbody>
+// 			</table>
+			
+// 		</div>
+// 	)
+// }
+
+// export default Inventory;
+

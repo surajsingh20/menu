@@ -1,0 +1,39 @@
+[
+
+    {
+
+        "ingredientId": 1,
+
+        "dishId": 1,
+
+        "Item": "Potato",
+
+        "dishUnit": 2
+
+    },
+
+    {
+
+        "ingredientId": 2,
+
+        "dishId": 2,
+
+        "Item": "Pizza Base",
+
+        "dishUnit": 1
+
+    },
+
+    {
+
+        "ingredientId": 3,
+
+        "dishId": 3,
+
+        "Item": "Chicken",
+
+        "dishUnit": 4
+
+    }
+
+]

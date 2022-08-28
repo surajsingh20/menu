@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import "../../AddMenu.css";
+import Menu from "./Menu";
+
+
+
 function AddMenu() {
+
   return (
     <div className="form1">
       <div className="form-body1">
@@ -58,3 +63,5 @@ function AddMenu() {
   );
 }
 export default AddMenu;
+
+
