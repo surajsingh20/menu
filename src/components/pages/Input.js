@@ -10,7 +10,7 @@ export default function Input({ type, name, index }) {
       inputmode="numeric"
       pattern="[0-9]*"
       onChange={({ target }) => updateItem(type, index, target.value)}
-      name={name.replace(" ", "-").toLowerCase()}
+      // name={name.replace(" ", "-").toLowerCase()}
     />
   );
 }

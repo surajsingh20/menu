@@ -39,7 +39,7 @@ export default function Menu({ dishId, name, type }) {
 
       <button className="Add">
         {" "}
-        <a href="/AddMenu"> ADD ITEM </a>
+        <a href="/AddMenu"> ADD MENU </a>
       </button>
 
       

@@ -29,7 +29,7 @@ export default function Menu2({ dishId, name, type }) {
       <div className="type">
         <p>{type} </p>
       </div>
-      <br />
+      <br /> 
       <p className="amount">
         {""} {price}{" "}
       </p>

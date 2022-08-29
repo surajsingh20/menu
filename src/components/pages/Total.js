@@ -13,8 +13,13 @@ export default function Total() {
 
   return (
     <div className="total">
+     {/* <a href="/Orders" ><button> Confirm Order</button>
+       </a>  */}
       <span className="total-title">Total:</span>
       <span className="total-price">Rs. {totalprice}</span>
     </div>
   );
 }
+
+
+// od no  items quantity total price status

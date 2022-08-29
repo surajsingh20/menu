@@ -8,6 +8,7 @@ import Menu2 from "./pages/Menu2";
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
+  
   const isUser = localStorage.getItem("isUser");
   const isAdmin = localStorage.getItem("isAdmin");
   
@@ -44,7 +45,7 @@ function Navbar() {
     },
     {
       name: "Orders",
-      redirectTo: "/"
+      redirectTo: "/Orders"
     }
   ];
 
