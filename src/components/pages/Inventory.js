@@ -6,6 +6,7 @@ function Inventory() {
   const [data, getData] = useState([]);
   // const URL = "https://jsonplaceholder.typicode.com/posts";
   const URL ="https://mocki.io/v1/fdbdada0-edaf-4e31-a14e-5c6b839a8c59";
+  
   // useEffect(() => {
   //   fetchData();
   // }, []);
