@@ -64,6 +64,7 @@ function Inventory() {
       .then((response) => {
         console.log(response);
         getData(response);
+
       });
   };
   return (
@@ -75,7 +76,7 @@ function Inventory() {
         </button>
       </div> */} 
 
-      <h1>Inventory Items</h1>
+      <h2>Inventory Items</h2>
       <table className="inventory">
         <tr>
           <th>User Id</th>
