@@ -13,12 +13,13 @@ import Inventory from "./components/pages/Inventory";
 import Orders from "./components/pages/Orders";
 import Menu2 from "./components/pages/Menu2";
 import newRecipe from "./components/pages/newRecipe";
+import Footer from "./components/Footer";
 function App() {
   return (
     <>
       <Router>
         <Navbar />
-        <Switch>
+        <><Switch>
           <Route path="/" exact component={Home} />
           <Route path="/Menu" component={Menu} />
           <Route path="/SignUp" component={SignUp} />
@@ -30,7 +31,10 @@ function App() {
           <Route path="/Menu2" component={Menu2}/>
           <Route path="/newRecipe" component={newRecipe}/>
         </Switch>
+        </>
+       <Footer/>
       </Router>
+      
     </>
   );
 }

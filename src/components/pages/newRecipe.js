@@ -2,6 +2,7 @@
 import React from 'react'
 import RecipeData from "../../RecipeData.json" 
 import Footer from '../Footer'
+import '../../components/pages/tabledata.css'
 function newRecipe(){
 	const DisplayData=RecipeData.map(
 		(info)=>{
@@ -28,7 +29,7 @@ function newRecipe(){
                      <th>Dish Unit</th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody className='TT'>
 				
 					
 					{DisplayData}
@@ -37,11 +38,19 @@ function newRecipe(){
 			</table>
 			
 	
-		<button className="Add">
-        {" "}
-        <a href="/AddMenu"> ADD ITEM </a>
-      </button>
-      <Footer/>
+		
+        {/* <a href="/AddMenu"> <button className="btn btn--primary btn--medium"> </button>
+        {" "}ADD ITEM </a> */}
+        <div className='ADDBUTTON'>
+		<a href="/AddMenu" className="Add">
+        <button type="submit" className="btn btn--primary btn--medium">ADD ITEM</button>
+        </a>
+  
+		</div>
+		
+    
+      
+      {/* <Footer/> */}
 		</>
 		
 	)

@@ -1,0 +1,40 @@
+
+/* td,
+th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  background-color: black;
+  
+} */
+.inventory{
+    width: 50%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+  }
+  tbody {
+    
+    width: 50%;
+   
+    height: 15%;
+    
+  } 
+  
+  th, td {
+    text-align: center;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}
+  
+  th {
+    background-color: black;
+    color: white;
+  }
+  tr:nth-child(odd){background-color:aliceblue} 
+  
+  
+  
+  

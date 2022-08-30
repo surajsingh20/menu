@@ -23,10 +23,11 @@ export default function Menu({ dishId, name, type }) {
           <Mains meals={mains} />
 
           <Total />
+
         </div>
       </Provider>
 
-
+     
       <h4 className="dishId">{dishId} </h4>
       <h3 className="fname">{name} </h3>
       <div className="type">
@@ -37,14 +38,21 @@ export default function Menu({ dishId, name, type }) {
         {""} {price}{" "}
       </p>
 
-      <button className="Add">
+      {/* <button className="Add">
         {" "}
         <a href="/AddMenu"> ADD MENU </a>
-      </button>
-
+      </button> */}
+       
+       
+       <div className="addbutton">
+       <a href="/AddMenu" className="Add">
+        <button type="submit" className="btn btn--primary btn--medium">Add Menu</button>
+        </a>
+       </div>
       
     </div>
-    <Footer />
+    
+    {/* <Footer /> */}
     </>
   );
 }

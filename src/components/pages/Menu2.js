@@ -20,7 +20,22 @@ export default function Menu2({ dishId, name, type }) {
           <Mains meals={mains} />
 
           <Total />
+       
         </div>
+       
+       {/* <>
+        <button className="Add">
+        {""}
+        <a href="/Orders" >
+        <Total />
+        Confirm Order </a>
+        </button>
+       </>  */}
+         
+            <a href="/Orders">
+                <button className="btn btn--primary btn--medium"> <Total/> Confirm order</button>
+              </a>
+
       </Provider>
 
 
@@ -39,7 +54,7 @@ export default function Menu2({ dishId, name, type }) {
         <a href="/AddMenu"> ADD ITEM </a>
       </button> */}
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

@@ -15,14 +15,16 @@ export default function Menu({ dishId, name, type }) {
   return (
     <div>
       <Provider>
+      
+      <h1>  Order Status</h1>
         <div className="menu">
-          <Mains meals={mains} />
+       <Mains meals={mains} />
 
           <Total />
         </div>
       </Provider>
-
-      <h4 className="dishId">{dishId} </h4>
+     
+      {/* <h4 className="dishId">{dishId} </h4>
       <h3 className="fname">{name} </h3>
       <div className="type">
         <p>{type} </p>
@@ -30,14 +32,11 @@ export default function Menu({ dishId, name, type }) {
       <br />
       <p className="amount">
         {""} {price}{" "}
-      </p>
+      </p> */}
 
-      <button className="Add">
-        {" "}
-        <a href="/AddMenu"> ADD ITEM </a>
-      </button>
+     
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

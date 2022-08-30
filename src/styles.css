@@ -33,13 +33,20 @@ body {
 } */
 .Add {
   width: 20%;
-  margin-left: 40%;
+  margin-left: 47%;
   border-radius: 5px;
   height: 40px;
   background-color: black;
-  margin-bottom: 30px;
+  margin-bottom: 5%;
   border-color: none;
-  margin-top: 8%;
+ 
+}
+a button .btn btn--primary btn--medium{
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+.addbutton{
+  margin-bottom: 5%;
 }
 .Add a {
   width: 100%;
@@ -48,6 +55,10 @@ body {
   text-decoration: none;
   display: block;
   color: #fafafd;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  margin-bottom: 9%;
 }
 .Add :hover {
   background-color: aliceblue;
@@ -74,6 +85,7 @@ input[type="text1"] {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
   margin-top: 50px;
   border-radius: 5px;
+  margin-bottom: 50PX;
 }
 
 @media (min-width: 660px) {

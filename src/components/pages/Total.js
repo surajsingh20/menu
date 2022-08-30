@@ -15,6 +15,7 @@ export default function Total() {
     <div className="total">
      {/* <a href="/Orders" ><button> Confirm Order</button>
        </a>  */}
+
       <span className="total-title">Total:</span>
       <span className="total-price">Rs. {totalprice}</span>
     </div>
