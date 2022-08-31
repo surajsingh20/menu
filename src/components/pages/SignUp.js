@@ -14,6 +14,7 @@ function SignUp() {
       password: "singh",
       confipass: "singh",
       Eamil: "singhsuraj61005@gmail.com"
+      
     }
   ];
 

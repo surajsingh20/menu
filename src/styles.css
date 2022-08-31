@@ -37,6 +37,9 @@ body {
 p .mains-description{
   margin-left: 10px;
 }
+.mains-name{
+  width: 200px;
+}
 .Add {
   width: 20%;
   margin-left: 47%;
@@ -52,7 +55,7 @@ a button .btn btn--primary btn--medium{
   margin-top: 100px;
 }
 .addbutton{
-  margin-bottom: 5%;
+  margin-bottom: 9.5%;
 }
 .Add a {
   width: 100%;
@@ -77,11 +80,14 @@ input[type="text1"] {
   width: 20px;
   height: 1.75rem;
   padding: 0.25rem;
-  margin: 0 0.75rem;
+  /* margin: 0 0.75rem; */
+  margin-right: 25px;
   background-color: transparent;
   border: 1px solid var(--secondary);
   text-align: center;
+  float: right;
 }
+
 
 .menu {
   padding: 2rem 2.25rem 1rem;

@@ -71,11 +71,11 @@ function Login() {
           {renderErrorMessage("pass")}
         </div>
 
-        <div className="input-container">
+        {/* <div className="input-container">
           <span>
             New User ?<Link to="/SignUp"> Register </Link>
           </span>
-        </div>
+        </div> */}
         <div className="button-container">
           <input type="submit" />
         </div>

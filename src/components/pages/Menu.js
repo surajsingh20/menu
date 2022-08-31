@@ -23,7 +23,7 @@ export default function Menu({ dishId, name, type }) {
         <div className="menu">
           <Mains meals={mains} />
 
-          <Total />
+          {/* <Total /> */}
 
         </div>
       </Provider>

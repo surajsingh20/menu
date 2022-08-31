@@ -13,19 +13,19 @@ function Cards() {
               src="images/samoosa.jpg"
               text="Winner winner Samosa dinner."
               label="Samosa"
-              path="/Menu"
+              path="/login"
             />
             <CardItem
               src="images/pizza.jpg"
               text="The party cant start without pizza"
               label="Pizza"
-              path="/Menu"
+              path="/login"
             />
             <CardItem
               src="images/chilichicken.jpg"
               text="Take a bite out of hunger."
               label="Chili Chicken"
-              path="/Menu"
+              path="/login"
             />
           </ul>
           {/* <ul className="cards__items">
