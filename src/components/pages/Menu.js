@@ -13,7 +13,7 @@ function Menu() {
 
   // const URL = "https://jsonplaceholder.typicode.com/posts";
 
-  const URL ="https://mocki.io/v1/fdbdada0-edaf-4e31-a14e-5c6b839a8c59";
+  const URL ="https://mocki.io/v1/46bc0460-af93-43c2-8575-51f623ab26ec";
 
 
 
@@ -22,7 +22,6 @@ function Menu() {
     fetchData();
 
   }, []);
-
 
 
   const fetchData = () => {
@@ -42,6 +41,25 @@ function Menu() {
       });
 
   };
+  
+  const deleteitem =(dishId)=>
+            {
+
+            // alert(dishId);
+
+            fetch(`https://mocki.io/v1/46bc0460-af93-43c2-8575-51f623ab26ec${dishId}`,
+            {
+            // method:`DELETE`
+              method:`GET`
+            }).then((response)=>{
+                response.json().then(()=>
+                {
+                  console.warn(response)
+                  fetchData() 
+                })
+            })
+
+            }
   return (
 
     <>
@@ -89,7 +107,9 @@ function Menu() {
             <td>{item.cost}</td>
 
             <td>{item.type}</td>
-            <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+
+            {/* <i class="fa fa-trash" aria-hidden="true"></i></td> */}
+            <td> <button onClick={()=>deleteitem(item.dishId)}>delete</button> </td>
           </tr>
 
         ))}
