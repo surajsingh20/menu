@@ -31,6 +31,12 @@ body {
   background-color: white;
 
 } */
+.mains-dishId{
+  margin-right: 15px;
+}
+p .mains-description{
+  margin-left: 10px;
+}
 .Add {
   width: 20%;
   margin-left: 47%;
@@ -130,7 +136,9 @@ input[type="text1"] {
 
 .mains-description {
   flex: 1 1 100%;
-  margin: 0.75rem 0 0;
+  /* margin: 0.75rem 0 0; */
+  margin-top: 10px;
+  margin-left: 30px;
   color: var(--secondary);
 }
 

@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import { Provider } from "../../Context";
 import Mains from "./Mains";
 import Total from "./Total";
-import Footer from "../../components/Footer";
+// import Footer from "../../components/Footer";
 import "../../styles.css";
 import { mains } from "../../menu";
-import { Button } from "../../components/Button";
-import { Link } from "react-router-dom";
-import AddMenu from "./AddMenu";
+// import { Button } from "../../components/Button";
+// import { Link } from "react-router-dom";
+// import AddMenu from "./AddMenu";
 // import {mains} from "../../menu.json";
 
 export default function Menu2({ dishId, name, type }) {

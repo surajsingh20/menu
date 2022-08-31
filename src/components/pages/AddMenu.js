@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../AddMenu.css";
-import Menu from "./Menu";
+// import Menu from "./Menu";
 
 
 function AddMenu() {

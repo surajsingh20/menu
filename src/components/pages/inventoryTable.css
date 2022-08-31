@@ -7,24 +7,26 @@ th {
   
 } */
 .inventory{
-    width: 50%;
+    width: 40%;
     margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
     border-collapse: collapse;
     margin-bottom: 50px;
+    height: 15%;
   }
-  tbody {
+  /* tbody {
     
     width: 50%;
    
     height: 15%;
     
-  } 
+  }  */
   
   th, td {
     text-align: center;
     padding: 8px;
+    
   }
   
   tr:nth-child(even){background-color: #f2f2f2}
@@ -32,6 +34,7 @@ th {
   th {
     background-color: black;
     color: white;
+    
   }
   tr:nth-child(odd){background-color:aliceblue} 
   

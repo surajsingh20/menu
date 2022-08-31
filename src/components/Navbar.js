@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Button } from "./Button";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import AdminLogin from "../components/pages/AdminLogin";
-import Menu2 from "./pages/Menu2";
+// import AdminLogin from "../components/pages/AdminLogin";
+// import Menu2 from "./pages/Menu2";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -18,6 +18,7 @@ function Navbar() {
   window.location.reload();
   
 }
+
   const Click=()=>{
     
     if( isUser==="true")
