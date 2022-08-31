@@ -2,6 +2,7 @@ import React from "react";
 import Input from "./Input.js";
 import { useEffect } from "react";
 import { useState } from "react";
+
 export default function Mains() {
 
   const [data, getData] = useState([]);
@@ -31,6 +32,7 @@ export default function Mains() {
           <h3 className="mains-name">{meal.name}</h3>
           <Input type="mains" name={meal.name} index={index} />
           <strong className="mains-price">Rs. {meal.cost}</strong>
+ 
           <p className="mains-description">{meal.type}</p>
         </article>
       ))}

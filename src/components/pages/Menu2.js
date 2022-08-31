@@ -31,10 +31,12 @@ export default function Menu2({ dishId, name, type }) {
         Confirm Order </a>
         </button>
        </>  */}
-         
-            <a href="/Orders">
+         <div className="confirmbutton">
+         <a href="/Orders">
                 <button className="btn btn--primary btn--medium"> <Total/> Confirm order</button>
               </a>
+         </div>
+           
 
       </Provider>
 

@@ -55,7 +55,10 @@ a button .btn btn--primary btn--medium{
   margin-top: 100px;
 }
 .addbutton{
-  margin-bottom: 9.5%;
+  margin-bottom: 12.5%;
+}
+.confirmbutton{
+  margin-bottom: 6.5%;
 }
 .Add a {
   width: 100%;
@@ -99,7 +102,9 @@ input[type="text1"] {
   border-radius: 5px;
   margin-bottom: 50PX;
 }
-
+.fa fa-trash{
+  margin-left: 10px;
+}
 @media (min-width: 660px) {
   .menu {
     /* display: grid; */

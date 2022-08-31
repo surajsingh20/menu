@@ -2,11 +2,19 @@ import React from "react";
 import "../../AddMenu.css";
 // import Menu from "./Menu";
 
-
+import Swal from "sweetalert2";
 function AddMenu() {
 
   const onButtonClick = () => {
-    window.alert('Item added')
+    // window.alert('Item added')
+   
+      Swal.fire({
+          title: "Success",
+          text: "Alert successful",
+          icon: "success",
+          confirmButtonText: "OK",
+        });
+  
   };
   
 
