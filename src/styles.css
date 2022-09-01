@@ -105,6 +105,34 @@ input[type="text1"] {
 .fa fa-trash{
   margin-left: 10px;
 }
+.confirmbutton{
+  margin-left: 45%;
+  margin-right: 45%;
+  width: 200px;
+  margin-bottom: 8%;
+}
+
+a{
+  text-decoration: none;
+}
+.btnn{
+  display: block;
+  background-color: var(--primary);
+  color:var(--primary);
+
+  /* border: 1px solid var(--primary); */
+  width: 200px;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+}
+.btnn:hover{
+  background-color:red ;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+  color: aliceblue;
+  cursor: pointer;
+}
 @media (min-width: 660px) {
   .menu {
     /* display: grid; */
@@ -196,7 +224,7 @@ input[type="text1"] {
   color: var(--secondary);
 
   border-top: 1px solid var(--secondary);
-  box-shadow: 0 -0.5rem 0.75rem 0.5rem var(--light);
+  /* box-shadow: 0 -0.5rem 0.75rem 0.5rem var(--light); */
   background-color: var(--secondary);
   color: var(--light);
   margin-top: 0;

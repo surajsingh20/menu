@@ -13,6 +13,7 @@ import { mains } from "../../menu";
 
 export default function Menu2({ dishId, name, type }) {
   const [price, setPrice] = useState("");
+  
   return (
     <div>
       <Provider>
@@ -33,7 +34,7 @@ export default function Menu2({ dishId, name, type }) {
        </>  */}
          <div className="confirmbutton">
          <a href="/Orders">
-                <button className="btn btn--primary btn--medium"> <Total/> Confirm order</button>
+                <button className="btnn"> <Total/> Confirm Order</button>
               </a>
          </div>
            

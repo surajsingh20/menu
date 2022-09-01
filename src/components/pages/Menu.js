@@ -1,6 +1,5 @@
 
 
-
 import React, { useState, useEffect } from "react";
 
 import "../../components/pages/tabledata.css";
@@ -42,24 +41,29 @@ function Menu() {
 
   };
   
-  const deleteitem =(dishId)=>
-            {
+  // const deleteitem =(dishId)=>
+  //           {
 
             // alert(dishId);
 
-            fetch(`https://mocki.io/v1/46bc0460-af93-43c2-8575-51f623ab26ec${dishId}`,
-            {
-            // method:`DELETE`
-              method:`GET`
-            }).then((response)=>{
-                response.json().then(()=>
-                {
-                  console.warn(response)
-                  fetchData() 
-                })
-            })
+            async function deleteitem(dishId) {
+              await fetch(`https://mocki.io/v1/46bc0460-af93-43c2-8575-51f623ab26ec${dishId}`, { method: 'DELETE' });
+              // setStatus('Delete successful');
+          }
 
-            }
+            // fetch(`https://mocki.io/v1/46bc0460-af93-43c2-8575-51f623ab26ec`,
+            // {
+            //  method:`DELETE`
+            //   // method:`GET`
+            // }).then((response )=>{
+            //     response.json().filter(dishId=>(response.dishId==dishId)).then(()=>
+            //     {
+            //       console.log(response)
+            //       fetchData() 
+            //     })
+            // })
+
+            // }
   return (
 
     <>
