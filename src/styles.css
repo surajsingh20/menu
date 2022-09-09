@@ -31,6 +31,13 @@ body {
   background-color: white;
 
 } */
+/* .menu{
+              
+background-image: url(/menu/public/images/oliver-sjostrom-cff_w0ADWIA-unsplash.jpg);
+} */
+.menu{
+  background-image: url(/menu/public/images/oliver-sjostrom-cff_w0ADWIA-unsplash.jpg);
+}
 .mains-dishId{
   margin-right: 15px;
 }
@@ -49,6 +56,11 @@ p .mains-description{
   margin-bottom: 5%;
   border-color: none;
  
+}
+.menuicon{
+  text-align: center;
+  margin-bottom: 20px;
+  
 }
 a button .btn btn--primary btn--medium{
   margin-bottom: 100px;
@@ -97,6 +109,7 @@ input[type="text1"] {
   margin: 0 auto;
   max-width: 50rem;
   background-color: var(--light);
+  background-image: url();
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
   margin-top: 50px;
   border-radius: 5px;

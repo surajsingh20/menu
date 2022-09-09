@@ -14,16 +14,65 @@ import Orders from "./components/pages/Orders";
 import Menu2 from "./components/pages/Menu2";
 import newRecipe from "./components/pages/newRecipe";
 import Footer from "./components/Footer";
+import { useState } from "react";
+import { useRef} from "react";
+import { login,logout } from "../src/components/pages/firebase";
+import { getAuth} from "firebase/auth";
 function App() {
+  
+  // const [ loading, setLoading ] = useState(false);
+  // const [userName ,setUserName] =useState("");
+
+  // async function handleLogout() {
+  //   setLoading(true);
+  //   try {
+  //     await logout();
+  //      localStorage.removeItem("isUser");
+  //     // localStorage.removeItem("userName");
+
+
+  //   } catch {
+  //     alert("Error!");
+  //   }
+  //   setLoading(false);
+  // }
+  // const auth = getAuth();
+
+
+  // const emailRef = useRef();
+  // const passwordRef = useRef();
+  // // React States
+  // const [errorMessages, setErrorMessages] = useState({});
+  // const [isSubmitted, setIsSubmitted] = useState(false);
+
+
+  // async function handleLogin() {
+
+  //   setLoading(true);
+   
+  //   try {
+  //     await login(emailRef.current.value, passwordRef.current.value);
+  //     localStorage.setItem("isUser", true);
+  //     // setIsSubmitted(true);
+  //     //  localStorage.setItem("userName",userName);
+  //     window.location.href = window.location.origin + "/";
+  //   } catch {
+  //   //   errors();
+  //   }
+  //   setLoading(false);
+
+  // }setLoading={setLoading} handleLogout={()=>handleLogout()}
+  //loading={loading} setLoading={setLoading} handleLogout={()=>handleLogout()} handleLogin={()=>handleLogin()}
+
   return (
     <>
       <Router>
-        <Navbar />
+        <Navbar   />
         <><Switch>
           <Route path="/" exact component={Home} />
           <Route path="/Menu" component={Menu} />
           <Route path="/SignUp" component={SignUp} />
-          <Route path="/Login" component={Login} />
+          <Route path="/Login" component= {Login} />
           <Route path="/AdminLogin" component={AdminLogin} />
           <Route path="/AddMenu" component={AddMenu} />
           <Route path="/Inventory" component={Inventory} />

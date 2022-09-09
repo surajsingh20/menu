@@ -57,12 +57,16 @@ function SignUp() {
   const renderForm = (
     <div className="form">
       <form onSubmit={handleSubmit}>
-        <div className="input-container">
+        {/* <div className="input-container">
           <label>Username </label>
           <input type="text" name="uname" required />
           {renderErrorMessage("uname")}
-        </div>
-
+        </div> */}
+         <div className="input-container">
+          <label>Email ID </label>
+          <input type="email" name="email" required />
+          {renderErrorMessage("email")}
+         </div>
         <div className="input-container">
           <label>Password </label>
           <input type="password" name="pass" required />
@@ -73,11 +77,7 @@ function SignUp() {
           <input type="password" name="confpass" required />
           {renderErrorMessage("confpass")}
         </div>
-        <div className="input-container">
-          <label>Email ID </label>
-          <input type="email" name="email" required />
-          {renderErrorMessage("email")}
-        </div>
+       
         <div className="checkbox">
           <input type="checkbox" name="checkbox" id="checkbox" required />
           <span>

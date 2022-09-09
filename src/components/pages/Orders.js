@@ -46,12 +46,27 @@ import React, { useState, useEffect } from "react";
 
 import "../../components/pages/tabledata.css";
 
+import Dropdown from "react-bootstrap/Dropdown";
 
 
 function Orders() {
-
+  
+  // const list = [
+  //   {
+  //     Title: "Books",
+  //     Id: "1"
+  //   },
+  //   {
+  //     Title: "Movies",
+  //     Id: "2"
+  //   },
+  //   {
+  //     Title: "Comics",
+  //     Id: "3"
+  //   }
+  // ];
   const [data, getData] = useState([]);
-
+  const [selects,setSelects]=useState();
   // const URL = "https://jsonplaceholder.typicode.com/posts";
 
   const URL ="https://mocki.io/v1/b10d41eb-baee-41b5-97cf-fb91929b1eb1";
@@ -97,11 +112,14 @@ function Orders() {
 
           <th>Table No</th>
 
-          <th>dish Id</th>
+          <th>dish Id</th> 
 
           <th>Status</th>
           
           <th>Special Request</th>
+
+          <th>status</th>
+
         </tr>
 
         {data.map((item, i) => (
@@ -114,9 +132,17 @@ function Orders() {
 
             <td>{item.dishId}</td>
 
-            <td>{item.status}</td>
+            <td>
+          {item.status}
+            </td>
 
             <td>{item.specialRequest}</td>
+            <td> {selects} 
+            <select value={selects} onChang ={e=>setSelects(e.target.value)}>
+              <option>ready</option>
+              <option>preparing</option>
+              </select>
+              </td>
           </tr>
 
         ))}

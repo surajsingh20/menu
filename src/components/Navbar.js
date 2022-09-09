@@ -4,14 +4,23 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 // import AdminLogin from "../components/pages/AdminLogin";
 // import Menu2 from "./pages/Menu2";
+// import { useRef} from "react";
+import { signup, login, logout, useAuth } from "../components/pages/firebase";
 
-function Navbar() {
+function Navbar({setLoading,handleLogout}) {
+
+
+  // const [userName,setUserName]=useState();
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
   
   const isUser = localStorage.getItem("isUser");
   const isAdmin = localStorage.getItem("isAdmin");
-  
+
+   const userName =localStorage.getItem("userName");
+
+
+
   if (isUser==="true" && isAdmin==="true")
 {
   localStorage.removeItem("isUser");
@@ -19,12 +28,14 @@ function Navbar() {
   
 }
 
+
   const Click=()=>{
     
     if( isUser==="true")
     {
     localStorage.removeItem("isUser");
     window.location.reload();
+
     
   }
     else if (isAdmin==="true")
@@ -32,6 +43,18 @@ function Navbar() {
       localStorage.removeItem("isAdmin");
       window.location.reload();
     }
+  }
+  async function handleLogout() {
+    setLoading(true);
+    try {
+      await logout();
+      localStorage.removeItem("isUser");
+      localStorage.removeItem("userName");
+
+    } catch {
+      alert("Error!");
+    }
+    setLoading(false);
   }
 
   const user = [
@@ -87,7 +110,7 @@ function Navbar() {
   const closeMobileMenu = () => setClick(false);
 
   const showButton = () => {
-    if (window.innerWidth <= 960) {
+    if (window.innerWidth <= 1060) {
       setButton(false);
     } else {
       setButton(true);
@@ -152,45 +175,7 @@ function Navbar() {
                 </li>
               ))}
 
-            {/* <li className="nav-item">
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                Home
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link to="/Menu" className="nav-links" onClick={closeMobileMenu}>
-                Menu
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                Orders
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/TableData"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                Inventory
-              </Link>
-            </li>
-            <li>
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                Recipe
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/SignUp"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                Sign Up
-              </Link>
-            </li> */}
+           
             <li className="nav-item">
               {/* {button && ( */}
               <Button
@@ -213,16 +198,25 @@ function Navbar() {
               >
                 Admin
               </Button> */}
+
               <a href="/AdminLogin">
                 <button className="btn btn--primary btn--medium">Admin</button>
               </a>
               {/* )} */}
             </li>
            
-
-            <a href="/">
+            {isUser && <a href="/">
                 <button className="btn btn--primary btn--medium" onClick={Click} >Logout</button>
-              </a>
+              </a>}
+
+            { (isUser || isAdmin ) ?
+              <h2> {userName} </h2>
+            :""
+            }
+
+
+
+            
           </ul>
           {/* {button && (
             <Button component={Link} to="/Login">
